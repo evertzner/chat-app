@@ -1,5 +1,5 @@
 ---
-import "../styles.css";
+import '../styles.css';
 interface Props {
   title: string;
 }
@@ -8,15 +8,29 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'
+      rel='stylesheet'
+    />
     <title>{title}</title>
   </head>
-  <body class="bg-red-400">
+  <body class='bg-light-grayish-violet relative h-screen grid place-content-center'>
+    <div
+      class='w-[400px] bg-gradient-to-b from-light-magenta to-light-violet absolute -z-10 rounded-b-full -left-20 top-0 h-[600px]'
+    >
+    </div>
     <slot />
+    <div
+      class='w-[400px] opacity-5 bg-gradient-to-b from-light-magenta to-light-violet absolute -z-10 rounded-t-full -right-20 bottom-0 h-[600px]'
+    >
+    </div>
   </body>
 </html>
