@@ -14,7 +14,8 @@ export default {
         'light-violet': '#8838ff',
         white: '#ffffff',
         'light-grayish-violet': '#f5f3f7', // app background
-        'very-light-magenta': '#e570ff' // radio button outline
+        'very-light-magenta': '#e570ff', // radio button outline
+        'very-light-violet': '#ede4f5' // message bubble
       }
     }
   },

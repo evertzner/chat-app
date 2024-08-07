@@ -1,0 +1,20 @@
+---
+import ArrowBack from '../icons/ArrowBack.astro';
+import MoreVertical from '../icons/MoreVertical.astro';
+---
+
+<div
+  class='w-full h-24 rounded-t-3xl rounded-b-md bg-gradient-to-r from-light-violet to-light-magenta px-4 pt-5 grid grid-cols-[max-content_max-content_1fr_max-content] gap-2 grid-col items-center'
+>
+  <div class='cursor-pointer'>
+    <ArrowBack />
+  </div>
+  <img src='/images/avatar.jpg' alt='Avatar' class='w-8 rounded-full border-2' />
+  <div>
+    <div class='text-light-grayish-violet'>Samuel Green</div>
+    <div class='text-pale-violet text-xs'>Available to Walk</div>
+  </div>
+  <div class='cursor-pointer'>
+    <MoreVertical />
+  </div>
+</div>
