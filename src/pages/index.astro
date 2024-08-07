@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Device from '../components/Device.astro';
 ---
 
 <Layout title='Chat App'>
-  <main class='text-6xl'>Hello there</main>
+  <div class='flex items-center'>
+    <Device />
+    <main class='text-6xl'>Hello there</main>
+  </div>
 </Layout>
