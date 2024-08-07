@@ -10,11 +10,11 @@ const { price, last } = Astro.props;
 ---
 
 <div
-  class=`bg-gradient-to-r to-light-violet from-light-magenta text-white p-3 rounded-2xl rounded-bl-md text-xs w-[240px] grid grid-cols-[max-content_1fr_max-content] gap-3 items-center ${last ? 'mb-4' : 'mb-3'}`
+  class=`bg-gradient-to-r to-light-violet from-light-magenta text-white p-3 rounded-2xl rounded-bl-md text-xs w-[240px] grid grid-cols-[max-content_1fr_max-content] gap-3 items-center ${last ? 'mb-2 xl:mb-4' : 'mb-2 xl:mb-3'}`
 >
   <div class='cursor-pointer'>
     <Circle />
   </div>
   <slot />
-  <span class='text-xl font-medium px-2'>${price}</span>
+  <span class='text-lg xl:text-xl font-medium px-2'>${price}</span>
 </div>

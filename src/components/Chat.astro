@@ -2,27 +2,21 @@
 import Message from './Message.astro';
 import CtaMessage from './CtaMessage.astro';
 import MessageInput from './MessageInput.astro';
+import Images from './Images.astro';
+
+const images = ['/images/dog-image-1.jpg', '/images/dog-image-2.jpg', '/images/dog-image-3.jpg'];
 ---
 
 <div class='px-4 py-4 flex flex-col'>
   <Message receiving>That sounds great. I'd be happy with that.</Message>
   <Message receiving last>Could you send over some pictures of your dog, please?</Message>
-
-  <div class='flex gap-3'>
-    <img class='w-16 rounded-xl' src='/images/dog-image-1.jpg' alt='dog-1' />
-    <img class='w-16 rounded-xl' src='/images/dog-image-2.jpg' alt='dog-2' />
-    <img class='w-16 rounded-xl' src='/images/dog-image-3.jpg' alt='dog-3' />
-  </div>
-
+  <Images images={images} />
   <Message>Here are a few pictures. She's a happy girl!</Message>
   <Message last>Can you make it?</Message>
-
   <Message receiving
     >She looks so happy! The time we discussed works. How long shall I take her out for?</Message
   >
-
   <CtaMessage price='29'>30 minutes walk</CtaMessage>
   <CtaMessage price='49' last>1 hour walk</CtaMessage>
-
   <MessageInput placeholder='Type a message...' />
 </div>

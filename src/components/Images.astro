@@ -1,0 +1,19 @@
+---
+interface Props {
+  images: string[];
+  last?: boolean;
+  receiving?: boolean;
+}
+
+const { images, last, receiving } = Astro.props;
+---
+
+<div
+  class=`grid grid-cols-3 gap-3 ${receiving ? 'self-start' : 'self-end'} ${last ? 'mb-2 xl:mb-4' : 'mb-2 xl:mb-3'}`
+>
+  {
+    images.map((image, index) => {
+      return <img class='w-16 rounded-xl' src={image} alt={index.toString()} />;
+    })
+  }
+</div>
